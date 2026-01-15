@@ -67,7 +67,7 @@ const Hero = () => {
             className="relative w-[300px] h-[400px] md:w-[400px] md:h-[550px] bg-gray-900 rounded-[40px] overflow-hidden border border-gray-800 shadow-2xl group"
           >
             <img
-              src="./src/assets/bromo1.jpg"
+              src="/bromo1.jpg"
               alt="Profile"
               className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 scale-105 group-hover:scale-110"
             />
