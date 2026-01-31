@@ -1,7 +1,18 @@
 import React, { useState } from "react";
 import Reveal from "./Reveal";
-// 1. Import tambahan: AnimatePresence dan motion
+// Pastikan framer-motion sudah diinstall: npm install framer-motion
 import { motion, AnimatePresence } from "framer-motion";
+
+import {
+  SiReact, SiLaravel, SiTailwindcss, SiBootstrap, SiHtml5,
+  SiGit, SiApache, SiFigma, SiCanva, SiObsstudio,
+  SiMysql, SiNextdotjs, SiGooglegemini 
+} from "react-icons/si";
+
+// 2. Import VscVscode (Pengganti SiVisualstudiocode yang error tadi)
+import { VscVscode } from "react-icons/vsc"; 
+
+import { FaVideo, FaImage, FaPaintBrush, FaCut } from "react-icons/fa";
 
 const Portfolio = () => {
   const [activeTab, setActiveTab] = useState("projects");
@@ -14,12 +25,12 @@ const Portfolio = () => {
       title: "Website Bimbel Sederhana",
       image: "/web bimbel.png",
       desc: "Tailwind CSS",
-      link : "https://contoh-website-bimbel-sederhana.vercel.app/",
+      link: "https://contoh-website-bimbel-sederhana.vercel.app/",
     },
     {
       id: 2,
       category: "design",
-      title: "Pembuatan Desain Aplikasi Mengenai Makanan Makanan Indonesia",
+      title: "Desain App Makanan Indo",
       image: "/apk makanan.png",
       desc: "Figma",
       link: "https://www.figma.com/design/Rp0QuA4zjqsNEaxXyO8vif/Untitled?node-id=0-1&t=lezvj9pe1kUiz6HC-1",
@@ -30,22 +41,23 @@ const Portfolio = () => {
       title: "Website Cafe Sederhana",
       image: "/webcafe.png",
       desc: "Tailwind CSS",
-      link : "https://contoh-website-cafe-sederhana.vercel.app/",
+      link: "https://contoh-website-cafe-sederhana.vercel.app/",
     },
     {
       id: 5,
       category: "design",
-      title: "Pembuatan Desain Aplikasi Penyimpanan Data Barang",
+      title: "Desain App Data Barang",
       image: "/Desktop Analyst Admin Finance.png",
       desc: "Figma",
+      link: null, 
     },
     {
       id: 7,
       category: "project",
       title: "Website Pribadi Sederhana",
       image: "/web hapizz.png",
-      desc: "Tailwind CSS, Vanilla Java Script",
-      link : "https://portofolio-hapizzz-2025.vercel.app/",
+      desc: "Tailwind CSS, JS",
+      link: "https://portofolio-hapizzz-2025.vercel.app/",
     },
     {
       id: 8,
@@ -53,43 +65,65 @@ const Portfolio = () => {
       title: "CRUD Karyawan",
       image: "/Crud.png",
       desc: "Tailwind CSS, PHP, MySQL",
+      link: null, 
+    },
+    {
+      id: 9,
+      category: "editing",
+      title: "Design Jersey Running",
+      image: "/SUKARUN.png",
+      desc: "Gemini Ai, Canva, Pixellab",
+      link: "https://drive.google.com/file/d/1c1ST2juClgN2oyy5ug7Tvg3bGlcDaTwf/view?usp=sharing", 
     },
   ];
 
   const certificatesData = [
     {
       id: 1,
-      title: "Sertifikat Kompetensi React",
-      issuer: "Dicoding Indonesia",
-      year: "2024",
+      title: "-",
+      issuer: "",
+      year: "",
     },
     {
       id: 2,
-      title: "UI/UX Design Masterclass",
-      issuer: "BuildWithAngga",
-      year: "2023",
+      title: "-",
+      issuer: "",
+      year: "",
     },
     {
       id: 3,
-      title: "Dasar Pemrograman Web",
-      issuer: "FreeCodeCamp",
-      year: "2023",
+      title: "-",
+      issuer: "",
+      year: "",
     },
   ];
 
-  const techStackData = [
-    {
-      category: "Frameworks",
-      items: ["React", "Laravel", "Tailwind CSS", "Next.js"],
-    },
-    {
-      category: "Tools",
-      items: ["Git & GitHub", "VS Code", "Postman", "Docker"],
-    },
-    {
-      category: "Design & Editing",
-      items: ["Figma", "Adobe Premiere", "Photoshop", "Canva"],
-    },
+  const techStack = [
+    // Frameworks & Libs
+    { name: 'React', icon: <SiReact />, color: 'text-blue-400', category: 'Frontend Lib' },
+    { name: 'Next.js', icon: <SiNextdotjs />, color: 'text-white', category: 'Web Framework' }, // BARU
+    { name: 'Laravel', icon: <SiLaravel />, color: 'text-red-500', category: 'PHP Framework' },
+    { name: 'Tailwind', icon: <SiTailwindcss />, color: 'text-cyan-400', category: 'CSS Framework' },
+    { name: 'Bootstrap', icon: <SiBootstrap />, color: 'text-purple-500', category: 'CSS Framework' },
+    
+    // Languages & Database
+    { name: 'HTML5', icon: <SiHtml5 />, color: 'text-orange-500', category: 'Markup Language' },
+    { name: 'MySQL', icon: <SiMysql />, color: 'text-blue-500', category: 'Database' }, // BARU
+    
+    // Tools & AI
+    { name: 'VS Code', icon: <VscVscode />, color: 'text-blue-500', category: 'Code Editor' },
+    { name: 'Git', icon: <SiGit />, color: 'text-orange-600', category: 'Version Control' },
+    { name: 'Gemini AI', icon: <SiGooglegemini />, color: 'text-blue-300', category: 'Artificial Intelligence' }, // BARU
+    { name: 'NetBeans', icon: <SiApache />, color: 'text-blue-300', category: 'Java IDE' },
+    
+    // Design & Creative
+    { name: 'Figma', icon: <SiFigma />, color: 'text-pink-400', category: 'UI/UX Design' },
+    { name: 'Canva', icon: <SiCanva />, color: 'text-cyan-500', category: 'Graphic Design' },
+    { name: 'CapCut', icon: <FaCut />, color: 'text-white', category: 'Mobile Editing' },
+    { name: 'OBS Studio', icon: <SiObsstudio />, color: 'text-white', category: 'Streaming' },
+    { name: 'PixelLab', icon: <FaImage />, color: 'text-blue-400', category: 'Graphic Editor' },
+    { name: 'PicsArt', icon: <FaPaintBrush />, color: 'text-pink-500', category: 'Photo Editor' },
+    { name: 'Wink', icon: <FaVideo />, color: 'text-yellow-400', category: 'Video Enhancer' },
   ];
 
   const filteredProjects =
@@ -126,9 +160,6 @@ const Portfolio = () => {
       {/* A. VIEW PROJECTS */}
       {activeTab === "projects" && (
         <div className="px-4 md:px-0">
-          {" "}
-          {/* Wrapper biar gak mepet di HP */}
-          {/* Sub-Filter */}
           <Reveal>
             <div className="flex flex-wrap justify-center gap-4 mb-10">
               {["all", "project", "design", "editing"].map((filter) => (
@@ -148,58 +179,62 @@ const Portfolio = () => {
               ))}
             </div>
           </Reveal>
+
           <motion.div
             layout
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           >
             <AnimatePresence mode="popLayout">
-              {filteredProjects.map((item) => (
-                <motion.div
-                  layout
-                  key={item.id}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.8 }}
-                  transition={{ duration: 0.3 }}
-                  // Hapus class styling dari sini, pindahkan ke tag <a> di bawah
-                  className="rounded-2xl"
-                >
-                  {/* BUNGKUS DENGAN TAG <A> SUPAYA BISA DIKLIK */}
-                  <a
-                    href={item.link}
-                    target="_blank" // Membuka di tab baru
-                    rel="noopener noreferrer" // Wajib untuk keamanan
-                    className="block w-full h-full group relative bg-gray-900 rounded-2xl overflow-hidden border border-gray-800 hover:border-teal-500/50 transition-all cursor-pointer"
+              {filteredProjects.map((item) => {
+                // LOGIKA BARU: Tentukan apakah pakai Link (a) atau Div biasa
+                const isLink = item.link !== null && item.link !== undefined;
+                const CardWrapper = isLink ? 'a' : 'div';
+                const wrapperProps = isLink 
+                  ? { href: item.link, target: "_blank", rel: "noopener noreferrer", className: "cursor-pointer" }
+                  : { className: "cursor-default" };
+
+                return (
+                  <motion.div
+                    layout
+                    key={item.id}
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0, scale: 0.8 }}
+                    transition={{ duration: 0.3 }}
+                    className="rounded-2xl"
                   >
-                    {/* Gambar */}
-                    <div className="h-48 overflow-hidden relative">
-                      <img
-                        src={item.image}
-                        alt={item.title}
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                      />
-
-                      {/* Opsi Tambahan: Ikon 'Visit' muncul saat hover biar user tau bisa diklik */}
-                      <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                        <span className="text-white font-medium flex items-center gap-2 border border-white/30 bg-black/30 px-4 py-2 rounded-full backdrop-blur-sm">
-                          Lihat Detail ↗
-                        </span>
+                    <CardWrapper
+                      {...wrapperProps}
+                      className={`block w-full h-full group relative bg-gray-900 rounded-2xl overflow-hidden border border-gray-800 hover:border-teal-500/50 transition-all ${wrapperProps.className}`}
+                    >
+                      <div className="h-48 overflow-hidden relative">
+                        <img
+                          src={item.image}
+                          alt={item.title}
+                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                        />
+                        {/* Overlay hanya muncul jika ada link */}
+                        {isLink && (
+                          <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <span className="text-white font-medium flex items-center gap-2 border border-white/30 bg-black/30 px-4 py-2 rounded-full backdrop-blur-sm">
+                              Lihat Detail ↗
+                            </span>
+                          </div>
+                        )}
                       </div>
-                    </div>
-
-                    {/* Deskripsi */}
-                    <div className="p-6">
-                      <span className="text-xs font-bold text-teal-400 uppercase tracking-wider">
-                        {item.category}
-                      </span>
-                      <h3 className="text-xl font-bold text-white mt-2 mb-2 group-hover:text-teal-400 transition-colors">
-                        {item.title}
-                      </h3>
-                      <p className="text-gray-400 text-sm">{item.desc}</p>
-                    </div>
-                  </a>
-                </motion.div>
-              ))}
+                      <div className="p-6">
+                        <span className="text-xs font-bold text-teal-400 uppercase tracking-wider">
+                          {item.category}
+                        </span>
+                        <h3 className="text-xl font-bold text-white mt-2 mb-2 group-hover:text-teal-400 transition-colors">
+                          {item.title}
+                        </h3>
+                        <p className="text-gray-400 text-sm">{item.desc}</p>
+                      </div>
+                    </CardWrapper>
+                  </motion.div>
+                );
+              })}
             </AnimatePresence>
           </motion.div>
         </div>
@@ -216,19 +251,8 @@ const Portfolio = () => {
               >
                 <div>
                   <div className="w-12 h-12 bg-teal-500/10 rounded-full flex items-center justify-center mb-4 text-teal-400">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      strokeWidth={1.5}
-                      stroke="currentColor"
-                      className="w-6 h-6"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z"
-                      />
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z" />
                     </svg>
                   </div>
                   <h3 className="text-lg font-bold text-white">{cert.title}</h3>
@@ -246,24 +270,20 @@ const Portfolio = () => {
       {/* C. VIEW TECH STACK */}
       {activeTab === "tech stack" && (
         <Reveal>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {techStackData.map((stack, index) => (
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+            {techStack.map((item, index) => (
               <div
                 key={index}
-                className="bg-neutral-900 p-6 rounded-2xl border border-gray-800"
+                className="group bg-gray-900 border border-gray-800 p-6 rounded-xl flex flex-col items-center justify-center gap-4 hover:border-teal-500/50 hover:bg-gray-800 transition-all duration-300"
               >
-                <h3 className="text-xl font-bold text-white mb-6 border-b border-gray-800 pb-2">
-                  {stack.category}
-                </h3>
-                <div className="flex flex-wrap gap-3">
-                  {stack.items.map((item, i) => (
-                    <span
-                      key={i}
-                      className="px-3 py-1 bg-gray-800 text-gray-300 text-sm rounded-lg border border-gray-700 hover:border-teal-500 hover:text-teal-400 transition-colors cursor-default"
-                    >
-                      {item}
-                    </span>
-                  ))}
+                <div className={`text-3xl ${item.color} group-hover:scale-110 transition-transform duration-300 drop-shadow-lg`}>
+                  {item.icon}
+                </div>
+                <div className="text-center">
+                  <h4 className="text-white font-bold text-lg">{item.name}</h4>
+                  <p className="text-gray-500 text-xs uppercase tracking-wider mt-1 font-semibold">
+                    {item.category}
+                  </p>
                 </div>
               </div>
             ))}

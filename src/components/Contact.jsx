@@ -62,7 +62,7 @@ const Contact = () => {
             Mari Bekerja Sama
           </h2>
           <p className="text-gray-400 mb-12 max-w-2xl mx-auto">
-            Saya selalu terbuka bagi anda yang tertarik bekerja sama dengan saya untuk membuat project baru atau hanya
+            Saya selalu terbuka bagi anda yang tertarik bekerja sama dengan saya untuk membuat project baru atau hanya sekedar
             bebincang santai. Hubungi saya dibawah ini.
           </p>
         </Reveal>

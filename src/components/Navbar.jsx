@@ -32,7 +32,7 @@ const Navbar = () => {
         
         {/* LOGO */}
         <a href="#beranda" className="text-2xl font-bold text-white tracking-tighter cursor-pointer z-50">
-          Ahnaf<span className="text-teal-400">.</span>
+          Hapizzz.
         </a>
 
         {/* MENU DESKTOP (Normal Href) */}
@@ -48,8 +48,6 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
-
-        {/* TOMBOL BAHASA */}
 
         {/* TOMBOL HAMBURGER */}
         <button 

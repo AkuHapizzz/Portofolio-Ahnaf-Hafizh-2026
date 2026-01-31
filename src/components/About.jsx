@@ -13,8 +13,8 @@ const About = () => {
               Tentang Saya
             </h3>
             <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight">
-              Developer yang Mengutamakan <br />
-              <span className="text-gray-500">Kualitas & Estetika.</span>
+              Developer & Designer yang Mengutamakan <br />
+              <span className="text-gray-500">Kualitas & Estetika dalam website dan design.</span>
             </h2>
           </Reveal>
 
@@ -33,12 +33,20 @@ const About = () => {
             
             <div className="flex justify-center md:justify-start gap-10 pt-6 border-t border-gray-800 mt-8">
               <div>
-                <h4 className="text-4xl font-bold text-white">2+</h4>
-                <p className="text-sm text-gray-500 mt-1">Tahun Pengalaman</p>
+                <h4 className="text-4xl font-bold text-white">5+</h4>
+                <p className="text-sm text-gray-500 mt-1">Tahun Pengalaman Editing</p>
               </div>
               <div>
                 <h4 className="text-4xl font-bold text-white">10+</h4>
-                <p className="text-sm text-gray-500 mt-1">Proyek Selesai</p>
+                <p className="text-sm text-gray-500 mt-1">Proyek Selesai Editing</p>
+              </div>
+              <div>
+                <h4 className="text-4xl font-bold text-white">2+</h4>
+                <p className="text-sm text-gray-500 mt-1">Tahun Pengalaman Web & Ui/Ux</p>
+              </div>
+              <div>
+                <h4 className="text-4xl font-bold text-white">5+</h4>
+                <p className="text-sm text-gray-500 mt-1">Proyek Selesai Web & Ui/Ux</p>
               </div>
             </div>
           </Reveal>

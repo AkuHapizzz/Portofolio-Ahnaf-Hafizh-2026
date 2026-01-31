@@ -33,7 +33,7 @@ const Hero = () => {
         <Reveal delay={0.4}>
           <p className="text-gray-400 max-w-lg mx-auto md:mx-0 leading-relaxed text-sm md:text-base">
             Saya ingin membantu anda dalam pengembangan tampilan web beserta
-            ui/ux dengan membuat solusi digital yang reaktif.
+            ui/ux dengan membuat solusi digital yang kreatif.
           </p>
         </Reveal>
 
