@@ -32,8 +32,8 @@ const Hero = () => {
 
         <Reveal delay={0.4}>
           <p className="text-gray-400 max-w-lg mx-auto md:mx-0 leading-relaxed text-sm md:text-base">
-            Saya ingin membantu anda dalam pengembangan tampilan web beserta
-            ui/ux dengan membuat solusi digital yang kreatif.
+            Mahasiswa yang berfokus pada Pengembangan Frontend yang handal dengan Desain UI/UX Kreatif sebagai solusi digital. 
+            Bersemangat dalam memanfaatkan AI Generatif dan kerangka kerja modern untuk membangun pengalaman digital yang cerdas & berpusat pada pengguna.
           </p>
         </Reveal>
 
@@ -54,6 +54,12 @@ const Hero = () => {
               className="border border-gray-600 hover:border-white text-white font-medium py-3 px-8 rounded-full transition-colors bg-transparent"
             >
               Kontak Saya
+            </a>
+            <a
+              href="https://drive.google.com/file/d/14Yr9BR9WP7wFnBcrnH2A-wUR-CBZ8KTE/view?usp=sharing"
+              className="border border-gray-600 hover:border-white text-white font-medium py-3 px-8 rounded-full transition-colors bg-transparent"
+            >
+              Download CV
             </a>
           </div>
         </Reveal>
