@@ -56,7 +56,7 @@ const Hero = () => {
               Kontak Saya
             </a>
             <a
-              href="https://drive.google.com/file/d/14Yr9BR9WP7wFnBcrnH2A-wUR-CBZ8KTE/view?usp=sharing"
+              href="https://drive.google.com/file/d/1mxRVEOi3zG2KHBjruY9q1mdTjfethNqO/view?usp=sharing"
               className="border border-gray-600 hover:border-white text-white font-medium py-3 px-8 rounded-full transition-colors bg-transparent"
             >
               Download CV
